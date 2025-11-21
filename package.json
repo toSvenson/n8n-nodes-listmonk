@@ -1,19 +1,19 @@
 {
-  "name": "@wiesinghilker/n8n-nodes-listmonk",
-  "version": "1.0.26",
+  "name": "@front-matter/n8n-nodes-listmonk",
+  "version": "1.0.27",
   "description": "n8n node for Listmonk API",
   "keywords": [
     "n8n-community-node-package"
   ],
   "license": "MIT",
-  "homepage": "https://wiesinghilker.de",
+  "homepage": "https://front-matter.de",
   "author": {
-    "name": "Tobias Wiesing",
-    "email": "opensource@wiesinghilker.de"
+    "name": "Martin Fenner",
+    "email": "martin@front-matter.de"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:wiesinghilker/n8n-nodes-listmonk.git"
+    "url": "git@github.com:front-matter/n8n-nodes-listmonk.git"
   },
   "engines": {
     "node": ">=18.10",
