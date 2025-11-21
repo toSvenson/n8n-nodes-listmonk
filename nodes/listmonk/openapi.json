@@ -6094,6 +6094,12 @@
           "subject": {
             "type": "string"
           },
+          "body": {
+            "type": "string"
+          },
+          "body_source": {
+            "type": "string"
+          },
           "lists": {
             "type": "array",
             "items": {
