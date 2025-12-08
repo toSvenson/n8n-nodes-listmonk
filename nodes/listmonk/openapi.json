@@ -97,9 +97,7 @@
   "paths": {
     "/health": {
       "get": {
-        "tags": [
-          "Miscellaneous"
-        ],
+        "tags": ["Miscellaneous"],
         "description": "healthcheck endpoint",
         "operationId": "getHealthCheck",
         "responses": {
@@ -123,9 +121,7 @@
     },
     "/config": {
       "get": {
-        "tags": [
-          "Miscellaneous"
-        ],
+        "tags": ["Miscellaneous"],
         "description": "returns general server config.",
         "operationId": "getServerConfig",
         "responses": {
@@ -149,9 +145,7 @@
     },
     "/lang/{lang}": {
       "get": {
-        "tags": [
-          "Miscellaneous"
-        ],
+        "tags": ["Miscellaneous"],
         "description": "returns the JSON language pack given the language code",
         "operationId": "getI18nLang",
         "parameters": [
@@ -186,9 +180,7 @@
     },
     "/dashboard/charts": {
       "get": {
-        "tags": [
-          "Miscellaneous"
-        ],
+        "tags": ["Miscellaneous"],
         "description": "returns chart data points to render on the dashboard.",
         "operationId": "getDashboardCharts",
         "responses": {
@@ -212,9 +204,7 @@
     },
     "/dashboard/counts": {
       "get": {
-        "tags": [
-          "Miscellaneous"
-        ],
+        "tags": ["Miscellaneous"],
         "description": "returns stats counts to show on the dashboard",
         "operationId": "getDashboardCounts",
         "responses": {
@@ -238,9 +228,7 @@
     },
     "/settings": {
       "get": {
-        "tags": [
-          "Settings"
-        ],
+        "tags": ["Settings"],
         "description": "returns settings from DB",
         "operationId": "getSettings",
         "responses": {
@@ -262,9 +250,7 @@
         }
       },
       "put": {
-        "tags": [
-          "Settings"
-        ],
+        "tags": ["Settings"],
         "description": "returns updated settings from the DB.",
         "operationId": "updateSettings",
         "requestBody": {
@@ -298,9 +284,7 @@
     },
     "/settings/smtp/test": {
       "post": {
-        "tags": [
-          "Settings"
-        ],
+        "tags": ["Settings"],
         "description": "test smtp settings",
         "operationId": "testSMTPSettings",
         "requestBody": {
@@ -334,9 +318,7 @@
     },
     "/admin/reload": {
       "post": {
-        "tags": [
-          "Admin"
-        ],
+        "tags": ["Admin"],
         "description": "restarts the app",
         "operationId": "reloadApp",
         "responses": {
@@ -360,9 +342,7 @@
     },
     "/logs": {
       "get": {
-        "tags": [
-          "Logs"
-        ],
+        "tags": ["Logs"],
         "description": "returns the log entries stored in the log buffer",
         "operationId": "getLogs",
         "responses": {
@@ -389,9 +369,7 @@
     },
     "/subscribers": {
       "get": {
-        "tags": [
-          "Subscribers"
-        ],
+        "tags": ["Subscribers"],
         "description": "returns all subscribers.",
         "operationId": "getSubscribers",
         "parameters": [
@@ -418,9 +396,7 @@
                 },
                 {
                   "type": "string",
-                  "enum": [
-                    "all"
-                  ],
+                  "enum": ["all"],
                   "description": "Return all results without pagination"
                 }
               ]
@@ -442,12 +418,7 @@
             "required": false,
             "schema": {
               "type": "string",
-              "enum": [
-                "name",
-                "status",
-                "created_at",
-                "updated_at"
-              ]
+              "enum": ["name", "status", "created_at", "updated_at"]
             }
           },
           {
@@ -457,10 +428,7 @@
             "required": false,
             "schema": {
               "type": "string",
-              "enum": [
-                "ASC",
-                "DESC"
-              ]
+              "enum": ["ASC", "DESC"]
             }
           },
           {
@@ -526,9 +494,7 @@
       "post": {
         "description": "handles creation of new subscriber",
         "operationId": "createSubscriber",
-        "tags": [
-          "Subscribers"
-        ],
+        "tags": ["Subscribers"],
         "requestBody": {
           "description": "new subscriber info",
           "content": {
@@ -560,9 +526,7 @@
       "delete": {
         "description": "handles subscribers deletion",
         "operationId": "deleteSubscriberByList",
-        "tags": [
-          "Subscribers"
-        ],
+        "tags": ["Subscribers"],
         "parameters": [
           {
             "in": "query",
@@ -597,9 +561,7 @@
       "get": {
         "description": "handles the retrieval of a single subscriber by ID.",
         "operationId": "getSubscriberById",
-        "tags": [
-          "Subscribers"
-        ],
+        "tags": ["Subscribers"],
         "parameters": [
           {
             "in": "path",
@@ -632,9 +594,7 @@
       "put": {
         "description": "modify subscriber data",
         "operationId": "updateSubscriberById",
-        "tags": [
-          "Subscribers"
-        ],
+        "tags": ["Subscribers"],
         "parameters": [
           {
             "in": "path",
@@ -677,9 +637,7 @@
       "delete": {
         "description": "handles subscriber deletion based on id",
         "operationId": "deleteSubscriberById",
-        "tags": [
-          "Subscribers"
-        ],
+        "tags": ["Subscribers"],
         "parameters": [
           {
             "in": "path",
@@ -714,9 +672,7 @@
       "put": {
         "description": "handles bulk addition or removal of subscribers",
         "operationId": "manageSubscriberLists",
-        "tags": [
-          "Subscribers"
-        ],
+        "tags": ["Subscribers"],
         "requestBody": {
           "description": "The list of subscribers details to add or remove",
           "content": {
@@ -750,9 +706,7 @@
       "put": {
         "description": "handles bulk addition or removal of subscribers for a specified list id",
         "operationId": "manageSubscriberListById",
-        "tags": [
-          "Subscribers"
-        ],
+        "tags": ["Subscribers"],
         "requestBody": {
           "description": "The list of subscribers to add or remove",
           "content": {
@@ -798,9 +752,7 @@
       "put": {
         "description": "handles blocklisting of subscriber list",
         "operationId": "manageBlocklistBySubscriberList",
-        "tags": [
-          "Subscribers"
-        ],
+        "tags": ["Subscribers"],
         "requestBody": {
           "description": "The list of subscribers to blocklist",
           "content": {
@@ -834,9 +786,7 @@
       "put": {
         "description": "handles the blocklisting of one or more subscribers.",
         "operationId": "manageBlocklistSubscribersById",
-        "tags": [
-          "Subscribers"
-        ],
+        "tags": ["Subscribers"],
         "requestBody": {
           "description": "The id of subscriber to add or remove",
           "content": {
@@ -882,9 +832,7 @@
       "get": {
         "description": "retrieves a subscriber's profile",
         "operationId": "exportSubscriberDataByID",
-        "tags": [
-          "Subscribers"
-        ],
+        "tags": ["Subscribers"],
         "parameters": [
           {
             "in": "path",
@@ -927,9 +875,7 @@
       "get": {
         "description": "retrieves a subscriber's bounce records",
         "operationId": "getSubscriberBouncesById",
-        "tags": [
-          "Subscribers"
-        ],
+        "tags": ["Subscribers"],
         "parameters": [
           {
             "in": "path",
@@ -965,9 +911,7 @@
       "delete": {
         "description": "deletes a subscriber's bounce records",
         "operationId": "deleteSubscriberBouncesById",
-        "tags": [
-          "Subscribers"
-        ],
+        "tags": ["Subscribers"],
         "parameters": [
           {
             "in": "path",
@@ -1002,9 +946,7 @@
       "post": {
         "description": "sends an optin confirmation e-mail to a subscriber.",
         "operationId": "subscriberSendOptinById",
-        "tags": [
-          "Subscribers"
-        ],
+        "tags": ["Subscribers"],
         "parameters": [
           {
             "in": "path",
@@ -1039,9 +981,7 @@
       "post": {
         "description": "bulk deletes based on an arbitrary SQL expression.",
         "operationId": "deleteSubscriberByQuery",
-        "tags": [
-          "Subscribers"
-        ],
+        "tags": ["Subscribers"],
         "requestBody": {
           "description": "Arbitrary SQL expression.",
           "content": {
@@ -1080,9 +1020,7 @@
       "put": {
         "description": "bulk blocklists subscribers based on an arbitrary SQL expression.",
         "operationId": "blocklistSubscribersQuery",
-        "tags": [
-          "Subscribers"
-        ],
+        "tags": ["Subscribers"],
         "requestBody": {
           "description": "Arbitrary SQL expression.",
           "content": {
@@ -1121,9 +1059,7 @@
       "put": {
         "description": "bulk adds/removes/unsubscribes subscribers from one or more lists based on an arbitrary SQL expression.",
         "operationId": "manageSubscriberListsByQuery",
-        "tags": [
-          "Subscribers"
-        ],
+        "tags": ["Subscribers"],
         "requestBody": {
           "description": "Arbitrary SQL expression.",
           "content": {
@@ -1162,9 +1098,7 @@
       "get": {
         "description": "handles retrieval of bounce records.",
         "operationId": "getBounces",
-        "tags": [
-          "Bounces"
-        ],
+        "tags": ["Bounces"],
         "parameters": [
           {
             "in": "query",
@@ -1194,9 +1128,7 @@
                 },
                 {
                   "type": "string",
-                  "enum": [
-                    "all"
-                  ],
+                  "enum": ["all"],
                   "description": "Return all results without pagination"
                 }
               ]
@@ -1216,12 +1148,7 @@
             "description": "Specifies the field by which to sort the bounce records. Available options are 'email', 'campaign_name', 'source', and 'created_at'",
             "schema": {
               "type": "string",
-              "enum": [
-                "email",
-                "campaign_name",
-                "source",
-                "created_at"
-              ]
+              "enum": ["email", "campaign_name", "source", "created_at"]
             }
           },
           {
@@ -1230,10 +1157,7 @@
             "description": "Determines the sort order of results. Use 'asc' for ascending or 'desc' for descending order",
             "schema": {
               "type": "string",
-              "enum": [
-                "asc",
-                "desc"
-              ]
+              "enum": ["asc", "desc"]
             }
           }
         ],
@@ -1278,9 +1202,7 @@
       "delete": {
         "description": "handles deletion of bounce records.",
         "operationId": "deleteBounces",
-        "tags": [
-          "Bounces"
-        ],
+        "tags": ["Bounces"],
         "parameters": [
           {
             "in": "query",
@@ -1333,9 +1255,7 @@
             }
           }
         ],
-        "tags": [
-          "Bounces"
-        ],
+        "tags": ["Bounces"],
         "responses": {
           "200": {
             "description": "bounce object",
@@ -1368,9 +1288,7 @@
             }
           }
         ],
-        "tags": [
-          "Bounces"
-        ],
+        "tags": ["Bounces"],
         "responses": {
           "200": {
             "description": "OK",
@@ -1394,9 +1312,7 @@
       "get": {
         "description": "retrieves lists with additional metadata like subscriber counts. This may be slow.",
         "operationId": "getLists",
-        "tags": [
-          "Lists"
-        ],
+        "tags": ["Lists"],
         "parameters": [
           {
             "in": "query",
@@ -1420,9 +1336,7 @@
                 },
                 {
                   "type": "string",
-                  "enum": [
-                    "all"
-                  ],
+                  "enum": ["all"],
                   "description": "Return all results without pagination"
                 }
               ]
@@ -1444,12 +1358,7 @@
             "required": false,
             "schema": {
               "type": "string",
-              "enum": [
-                "name",
-                "status",
-                "created_at",
-                "updated_at"
-              ]
+              "enum": ["name", "status", "created_at", "updated_at"]
             }
           },
           {
@@ -1459,10 +1368,7 @@
             "required": false,
             "schema": {
               "type": "string",
-              "enum": [
-                "ASC",
-                "DESC"
-              ]
+              "enum": ["ASC", "DESC"]
             }
           },
           {
@@ -1525,9 +1431,7 @@
       "post": {
         "description": "handles list creation",
         "operationId": "createList",
-        "tags": [
-          "Lists"
-        ],
+        "tags": ["Lists"],
         "requestBody": {
           "description": "new list info",
           "content": {
@@ -1561,9 +1465,7 @@
       "get": {
         "description": "retrieves lists with additional metadata like subscriber counts. This may be slow.",
         "operationId": "getListById",
-        "tags": [
-          "Lists"
-        ],
+        "tags": ["Lists"],
         "parameters": [
           {
             "in": "path",
@@ -1596,9 +1498,7 @@
       "put": {
         "description": "handles list modification",
         "operationId": "updateListById",
-        "tags": [
-          "Lists"
-        ],
+        "tags": ["Lists"],
         "parameters": [
           {
             "in": "path",
@@ -1641,9 +1541,7 @@
       "delete": {
         "description": "handles list deletion, either a single one (ID in the URI), or a list.",
         "operationId": "deleteListById",
-        "tags": [
-          "Lists"
-        ],
+        "tags": ["Lists"],
         "parameters": [
           {
             "in": "path",
@@ -1678,9 +1576,7 @@
       "get": {
         "description": "returns import status.",
         "operationId": "getImportSubscribers",
-        "tags": [
-          "Import"
-        ],
+        "tags": ["Import"],
         "responses": {
           "200": {
             "description": "import status",
@@ -1702,9 +1598,7 @@
       "post": {
         "description": "handles the uploading and bulk importing of a ZIP file of one or more CSV files.",
         "operationId": "importSubscribers",
-        "tags": [
-          "Import"
-        ],
+        "tags": ["Import"],
         "requestBody": {
           "description": "uploads and bulk imports of compressed CSV files",
           "content": {
@@ -1721,6 +1615,18 @@
                     "type": "string",
                     "format": "binary",
                     "description": "File for upload."
+                  }
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "params": { "type": "string" },
+                  "file": {
+                    "type": "string",
+                    "description": "Base64-encoded file content"
                   }
                 }
               }
@@ -1748,9 +1654,7 @@
       "delete": {
         "description": "sends a stop signal to the importer.",
         "operationId": "stopImportSubscribers",
-        "tags": [
-          "Import"
-        ],
+        "tags": ["Import"],
         "responses": {
           "200": {
             "description": "response",
@@ -1774,9 +1678,7 @@
       "get": {
         "description": "returns import logs from an ongoing import",
         "operationId": "getImportSubscriberLogs",
-        "tags": [
-          "Import"
-        ],
+        "tags": ["Import"],
         "responses": {
           "200": {
             "description": "import statistics",
@@ -1810,12 +1712,7 @@
               "type": "array",
               "items": {
                 "type": "string",
-                "enum": [
-                  "scheduled",
-                  "running",
-                  "paused",
-                  "cancelled"
-                ]
+                "enum": ["scheduled", "running", "paused", "cancelled"]
               }
             }
           },
@@ -1850,9 +1747,7 @@
                 },
                 {
                   "type": "string",
-                  "enum": [
-                    "all"
-                  ],
+                  "enum": ["all"],
                   "description": "Return all results without pagination"
                 }
               ]
@@ -1877,10 +1772,7 @@
             "required": false,
             "schema": {
               "type": "string",
-              "enum": [
-                "ASC",
-                "DESC"
-              ]
+              "enum": ["ASC", "DESC"]
             }
           },
           {
@@ -1890,12 +1782,7 @@
             "required": false,
             "schema": {
               "type": "string",
-              "enum": [
-                "name",
-                "status",
-                "created_at",
-                "updated_at"
-              ]
+              "enum": ["name", "status", "created_at", "updated_at"]
             }
           },
           {
@@ -1908,9 +1795,7 @@
             }
           }
         ],
-        "tags": [
-          "Campaigns"
-        ],
+        "tags": ["Campaigns"],
         "responses": {
           "200": {
             "description": "list of campaigns",
@@ -1952,9 +1837,7 @@
       "post": {
         "description": "handles campaign creation",
         "operationId": "createCampaign",
-        "tags": [
-          "Campaigns"
-        ],
+        "tags": ["Campaigns"],
         "requestBody": {
           "description": "new campaign info",
           "content": {
@@ -1982,15 +1865,51 @@
             }
           }
         }
+      },
+      "delete": {
+        "description": "deletes multiple campaigns by IDs",
+        "operationId": "deleteCampaigns",
+        "tags": ["Campaigns"],
+        "requestBody": {
+          "description": "IDs of campaigns to delete",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "ids": {
+                    "type": "array",
+                    "items": { "type": "integer" }
+                  }
+                },
+                "required": ["ids"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": { "type": "boolean" }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     },
     "/campaigns/{id}": {
       "get": {
         "description": "handles retrieval of campaigns.",
         "operationId": "getCampaignById",
-        "tags": [
-          "Campaigns"
-        ],
+        "tags": ["Campaigns"],
         "parameters": [
           {
             "in": "path",
@@ -2032,9 +1951,7 @@
       "put": {
         "description": "handle updation of campaign",
         "operationId": "updateCampaignById",
-        "tags": [
-          "Campaigns"
-        ],
+        "tags": ["Campaigns"],
         "parameters": [
           {
             "in": "path",
@@ -2077,9 +1994,7 @@
       "delete": {
         "description": "deletes specified campaign",
         "operationId": "deleteCampaignById",
-        "tags": [
-          "Campaigns"
-        ],
+        "tags": ["Campaigns"],
         "parameters": [
           {
             "in": "path",
@@ -2114,9 +2029,7 @@
       "get": {
         "description": "returns stats of a given set of campaign IDs.",
         "operationId": "getRunningCampaignStats",
-        "tags": [
-          "Campaigns"
-        ],
+        "tags": ["Campaigns"],
         "parameters": [
           {
             "in": "query",
@@ -2154,9 +2067,7 @@
       "get": {
         "description": "retrieves view counts for a campaign.",
         "operationId": "getCampaignAnalytics",
-        "tags": [
-          "Campaigns"
-        ],
+        "tags": ["Campaigns"],
         "parameters": [
           {
             "in": "path",
@@ -2165,12 +2076,7 @@
             "description": "type of stats, either links, view, click or bounce",
             "schema": {
               "type": "string",
-              "enum": [
-                "links",
-                "views",
-                "clicks",
-                "bounces"
-              ]
+              "enum": ["links", "views", "clicks", "bounces"]
             }
           },
           {
@@ -2228,9 +2134,7 @@
       "get": {
         "description": "renders the HTML preview of a campaign body",
         "operationId": "previewCampaignById",
-        "tags": [
-          "Campaigns"
-        ],
+        "tags": ["Campaigns"],
         "parameters": [
           {
             "in": "path",
@@ -2259,9 +2163,7 @@
       "post": {
         "description": "renders the HTML preview of a campaign body",
         "operationId": "updatePreviewCampaignById",
-        "tags": [
-          "Campaigns"
-        ],
+        "tags": ["Campaigns"],
         "parameters": [
           {
             "in": "path",
@@ -2295,6 +2197,16 @@
                   }
                 }
               }
+            },
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "template_id": { "type": "integer" },
+                  "content_type": { "type": "string" },
+                  "body": { "type": "string" }
+                }
+              }
             }
           }
         },
@@ -2317,9 +2229,7 @@
       "post": {
         "description": "renders the HTML preview of a campaign body",
         "operationId": "previewCampaignTextById",
-        "tags": [
-          "Campaigns"
-        ],
+        "tags": ["Campaigns"],
         "requestBody": {
           "required": true,
           "description": "template id, content type and campaign body",
@@ -2340,6 +2250,16 @@
                     "description": "campaign body",
                     "type": "string"
                   }
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "template_id": { "type": "integer" },
+                  "content_type": { "type": "string" },
+                  "body": { "type": "string" }
                 }
               }
             }
@@ -2375,9 +2295,7 @@
       "put": {
         "description": "handles campaign status modification",
         "operationId": "updateCampaignStatusById",
-        "tags": [
-          "Campaigns"
-        ],
+        "tags": ["Campaigns"],
         "parameters": [
           {
             "in": "path",
@@ -2398,12 +2316,7 @@
                 "properties": {
                   "status": {
                     "type": "string",
-                    "enum": [
-                      "scheduled",
-                      "running",
-                      "paused",
-                      "cancelled"
-                    ]
+                    "enum": ["scheduled", "running", "paused", "cancelled"]
                   }
                 }
               }
@@ -2433,9 +2346,7 @@
       "put": {
         "description": "handles campaign status modification",
         "operationId": "updateCampaignArchiveById",
-        "tags": [
-          "Campaigns"
-        ],
+        "tags": ["Campaigns"],
         "parameters": [
           {
             "in": "path",
@@ -2491,9 +2402,7 @@
       "post": {
         "description": "handles campaign content (body) format conversions.",
         "operationId": "createCampaignContentById",
-        "tags": [
-          "Campaigns"
-        ],
+        "tags": ["Campaigns"],
         "requestBody": {
           "description": "updated campaign content",
           "content": {
@@ -2538,9 +2447,7 @@
       "post": {
         "description": "handles sending of campaign message to arbitrary subscribers for testing",
         "operationId": "testCampaignById",
-        "tags": [
-          "Campaigns"
-        ],
+        "tags": ["Campaigns"],
         "parameters": [
           {
             "in": "path",
@@ -2597,9 +2504,7 @@
       "get": {
         "description": "handles retrieval of uploaded media.",
         "operationId": "getMedia",
-        "tags": [
-          "Media"
-        ],
+        "tags": ["Media"],
         "responses": {
           "200": {
             "description": "response",
@@ -2624,9 +2529,7 @@
       "post": {
         "description": "handles media file uploads.",
         "operationId": "uploadMedia",
-        "tags": [
-          "Media"
-        ],
+        "tags": ["Media"],
         "requestBody": {
           "description": "upload media file",
           "content": {
@@ -2634,6 +2537,17 @@
               "schema": {
                 "type": "string",
                 "format": "binary"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "description": "Base64-encoded file content"
+                  }
+                }
               }
             }
           }
@@ -2661,9 +2575,7 @@
       "get": {
         "description": "handles retrieval of uploaded media.",
         "operationId": "getMediaById",
-        "tags": [
-          "Media"
-        ],
+        "tags": ["Media"],
         "parameters": [
           {
             "in": "path",
@@ -2696,9 +2608,7 @@
       "delete": {
         "description": "handles deletion of uploaded media.",
         "operationId": "deleteMediaById",
-        "tags": [
-          "Media"
-        ],
+        "tags": ["Media"],
         "parameters": [
           {
             "in": "path",
@@ -2733,9 +2643,7 @@
       "get": {
         "description": "handles retrieval of templates",
         "operationId": "getTemplates",
-        "tags": [
-          "Templates"
-        ],
+        "tags": ["Templates"],
         "parameters": [
           {
             "in": "query",
@@ -2771,9 +2679,7 @@
       "post": {
         "description": "handles template creation",
         "operationId": "createTemplate",
-        "tags": [
-          "Templates"
-        ],
+        "tags": ["Templates"],
         "requestBody": {
           "description": "new template info",
           "required": true,
@@ -2808,9 +2714,7 @@
       "get": {
         "description": "handles retrieval of templates",
         "operationId": "getTemplateById",
-        "tags": [
-          "Templates"
-        ],
+        "tags": ["Templates"],
         "parameters": [
           {
             "in": "path",
@@ -2852,9 +2756,7 @@
       "put": {
         "description": "handles template modification",
         "operationId": "updateTemplateById",
-        "tags": [
-          "Templates"
-        ],
+        "tags": ["Templates"],
         "parameters": [
           {
             "in": "path",
@@ -2898,9 +2800,7 @@
       "delete": {
         "description": "handles deletion of templates",
         "operationId": "deleteTemplateById",
-        "tags": [
-          "Templates"
-        ],
+        "tags": ["Templates"],
         "parameters": [
           {
             "in": "path",
@@ -2935,9 +2835,7 @@
       "post": {
         "description": "get the HTML preview of a template.",
         "operationId": "previewTemplate",
-        "tags": [
-          "Templates"
-        ],
+        "tags": ["Templates"],
         "requestBody": {
           "required": true,
           "description": "template parameters",
@@ -2954,6 +2852,15 @@
                     "description": "template body",
                     "type": "string"
                   }
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "template_type": { "type": "string" },
+                  "body": { "type": "string" }
                 }
               }
             }
@@ -2978,9 +2885,7 @@
       "get": {
         "description": "renders the HTML preview of a template.",
         "operationId": "previewTemplateById",
-        "tags": [
-          "Templates"
-        ],
+        "tags": ["Templates"],
         "requestBody": {
           "description": "template parameters",
           "required": true,
@@ -2997,6 +2902,15 @@
                     "description": "template body",
                     "type": "string"
                   }
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "template_type": { "type": "string" },
+                  "body": { "type": "string" }
                 }
               }
             }
@@ -3031,10 +2945,8 @@
     "/templates/{id}/default": {
       "put": {
         "description": "handles template modification.",
-        "operationId": "updateTemplateById",
-        "tags": [
-          "Templates"
-        ],
+        "operationId": "setDefaultTemplateById",
+        "tags": ["Templates"],
         "parameters": [
           {
             "in": "path",
@@ -3062,9 +2974,7 @@
     },
     "/tx": {
       "post": {
-        "tags": [
-          "Transactional"
-        ],
+        "tags": ["Transactional"],
         "description": "send message to a subscriber",
         "operationId": "transactWithSubscriber",
         "requestBody": {
@@ -3100,9 +3010,7 @@
       "delete": {
         "description": "garbage collects (deletes) orphaned or blocklisted subscribers.",
         "operationId": "deleteGCSubscribers",
-        "tags": [
-          "Maintenance"
-        ],
+        "tags": ["Maintenance"],
         "parameters": [
           {
             "in": "path",
@@ -3142,9 +3050,7 @@
       "delete": {
         "description": "garbage collects (deletes) campaign analytics.",
         "operationId": "deleteCampaignAnalyticsByType",
-        "tags": [
-          "Maintenance"
-        ],
+        "tags": ["Maintenance"],
         "requestBody": {
           "description": "date parameter",
           "required": true,
@@ -3157,6 +3063,14 @@
                     "type": "string",
                     "format": "date"
                   }
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "before_date": { "type": "string", "format": "date" }
                 }
               }
             }
@@ -3196,9 +3110,7 @@
       "delete": {
         "description": "garbage collects (deletes) orphaned or blocklisted subscribers.",
         "operationId": "deleteUnconfirmedSubscriptions",
-        "tags": [
-          "Maintenance"
-        ],
+        "tags": ["Maintenance"],
         "requestBody": {
           "required": true,
           "description": "date parameter",
@@ -3211,6 +3123,14 @@
                     "type": "string",
                     "format": "date"
                   }
+                }
+              }
+            },
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "before_date": { "type": "string", "format": "date" }
                 }
               }
             }
@@ -3244,9 +3164,7 @@
       "get": {
         "description": "returns the list of public lists with minimal fields",
         "operationId": "getPublicLists",
-        "tags": [
-          "Public"
-        ],
+        "tags": ["Public"],
         "responses": {
           "200": {
             "description": "response",
@@ -3276,9 +3194,7 @@
       "post": {
         "description": "handles subscription requests coming from public API calls.",
         "operationId": "handlePublicSubscription",
-        "tags": [
-          "Public"
-        ],
+        "tags": ["Public"],
         "requestBody": {
           "description": "subscription request parameters",
           "content": {
@@ -5719,11 +5635,7 @@
           },
           "action": {
             "type": "string",
-            "enum": [
-              "add",
-              "remove",
-              "unsubscribe"
-            ],
+            "enum": ["add", "remove", "unsubscribe"],
             "description": "Whether to add, remove, or unsubscribe the users."
           },
           "target_list_ids": {
@@ -5735,11 +5647,7 @@
           },
           "status": {
             "type": "string",
-            "enum": [
-              "confirmed",
-              "unconfirmed",
-              "unsubscribed"
-            ],
+            "enum": ["confirmed", "unconfirmed", "unsubscribed"],
             "description": "confirmed, unconfirmed, or unsubscribed status."
           }
         }
@@ -5844,17 +5752,11 @@
           },
           "type": {
             "type": "string",
-            "enum": [
-              "public",
-              "private"
-            ]
+            "enum": ["public", "private"]
           },
           "optin": {
             "type": "string",
-            "enum": [
-              "single",
-              "double"
-            ]
+            "enum": ["single", "double"]
           },
           "tags": {
             "type": "array",
@@ -5938,10 +5840,7 @@
           },
           "type": {
             "type": "string",
-            "enum": [
-              "regular",
-              "optin"
-            ]
+            "enum": ["regular", "optin"]
           },
           "name": {
             "type": "string"
@@ -5963,12 +5862,7 @@
           },
           "content_type": {
             "type": "string",
-            "enum": [
-              "richtext",
-              "html",
-              "markdown",
-              "plain"
-            ]
+            "enum": ["richtext", "html", "markdown", "plain"]
           },
           "tags": {
             "type": "array",
@@ -6033,10 +5927,7 @@
           },
           "type": {
             "type": "string",
-            "enum": [
-              "regular",
-              "optin"
-            ]
+            "enum": ["regular", "optin"]
           },
           "name": {
             "type": "string"
@@ -6058,12 +5949,7 @@
           },
           "content_type": {
             "type": "string",
-            "enum": [
-              "richtext",
-              "html",
-              "markdown",
-              "plain"
-            ]
+            "enum": ["richtext", "html", "markdown", "plain"]
           },
           "tags": {
             "type": "array",
@@ -6326,11 +6212,7 @@
       },
       "NewTemplate": {
         "type": "object",
-        "required": [
-          "name",
-          "type",
-          "body"
-        ],
+        "required": ["name", "type", "body"],
         "properties": {
           "name": {
             "type": "string",
@@ -6338,11 +6220,7 @@
           },
           "type": {
             "type": "string",
-            "enum": [
-              "campaign",
-              "campaign_visual",
-              "tx"
-            ],
+            "enum": ["campaign", "campaign_visual", "tx"],
             "description": "Type of the template"
           },
           "subject": {
@@ -6368,11 +6246,7 @@
           },
           "type": {
             "type": "string",
-            "enum": [
-              "campaign",
-              "campaign_visual",
-              "tx"
-            ],
+            "enum": ["campaign", "campaign_visual", "tx"],
             "description": "Type of the template"
           },
           "subject": {

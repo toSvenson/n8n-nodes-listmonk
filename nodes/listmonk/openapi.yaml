@@ -889,7 +889,7 @@ paths:
                 properties:
                   data:
                     type: boolean
-                    
+
   /lists:
     get:
       description: retrieves lists with additional metadata like subscriber counts. This may be slow.
