@@ -6014,18 +6014,9 @@
             "type": "boolean"
           },
           "send_at": {
-            "type": "object",
-            "properties": {
-              "headers": {
-                "type": "array",
-                "items": {
-                  "type": "object"
-                }
-              },
-              "template_id": {
-                "type": "number"
-              }
-            }
+            "type": "string",
+            "format": "date-time",
+            "description": "RFC3339 timestamp when the campaign should be sent (e.g., 2025-12-08T21:00:00Z)"
           }
         }
       },
@@ -6063,7 +6054,9 @@
             "type": "boolean"
           },
           "send_at": {
-            "type": "object"
+            "type": "string",
+            "format": "date-time",
+            "description": "RFC3339 timestamp when the campaign should be sent (e.g., 2025-12-08T21:00:00Z)"
           },
           "headers": {
             "type": "array",
