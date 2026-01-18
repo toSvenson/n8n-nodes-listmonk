@@ -3973,6 +3973,8 @@ components:
           type: string
         subject:
           type: string
+        body:
+          type: string
         lists:
           type: array
           items:
@@ -3992,14 +3994,30 @@ components:
         send_later:
           type: boolean
         send_at:
+          type: string
+          format: date-time
+          description: RFC3339 timestamp when the campaign should be sent (e.g.,
+            2025-12-08T21:00:00Z)
+        template_id:
+          type: integer
+        altbody:
+          type: string
+          description: Alternate plain text body for HTML (and richtext) emails
+        body_source:
+          type: string
+          description: If content_type is visual, the JSON block source of the body
+        headers:
           type: object
-          properties:
-            headers:
-              type: array
-              items:
-                type: object
-            template_id:
-              type: number
+          additionalProperties: true
+          description: 'Key-value pairs to send as SMTP headers. Example:
+            {"X-Custom-Header": "value", "Reply-To": "email@example.com"}'
+        attribs:
+          type: object
+          additionalProperties: true
+          description: 'Optional JSON object attributes that can be used in the campaign
+            message template. Supports multiple attributes and nested objects.
+            Example: {"location": "Somewhere", "event": {"name": "Conference",
+            "date": "2025-12-01"}}'
 
     CampaignUpdate:
       type: object
