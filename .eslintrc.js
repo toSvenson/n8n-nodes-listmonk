@@ -19,7 +19,14 @@ module.exports = {
 	},
 
 	ignorePatterns: [
-		'.eslintrc.js', '**/*.js', '**/node_modules/**', '**/dist/**',
+		'.eslintrc.js',
+		'**/*.js',
+		'**/node_modules/**',
+		'**/dist/**',
+		'**/coverage/**',
+		'**/test/**',
+		'tsconfig.json',
+		'tslint.json',
 	],
 
 	overrides: [
