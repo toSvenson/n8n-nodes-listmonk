@@ -24,8 +24,8 @@
   "scripts": {
     "build": "pnpm exec n8n-node-dev build",
     "dev": "pnpm exec n8n-node-dev dev",
-    "lint": "pnpm exec n8n-node-dev lint",
-    "lint:fix": "pnpm exec n8n-node-dev lint --fix",
+    "lint": "pnpm exec eslint . --ext .ts,.json",
+    "lint:fix": "pnpm exec eslint . --ext .ts,.json --fix",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
