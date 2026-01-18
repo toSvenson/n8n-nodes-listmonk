@@ -22,15 +22,15 @@
   "packageManager": "pnpm@9.1.4",
   "main": "index.js",
   "scripts": {
-    "build": "n8n-node build",
-    "dev": "n8n-node dev",
-    "lint": "n8n-node lint",
-    "lint:fix": "n8n-node lint --fix",
+    "build": "pnpm exec n8n-node build",
+    "dev": "pnpm exec n8n-node dev",
+    "lint": "pnpm exec n8n-node lint",
+    "lint:fix": "pnpm exec n8n-node lint --fix",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "test:e2e": "jest --testPathPattern=e2e",
-    "release": "n8n-node release",
+    "release": "pnpm exec n8n-node release",
     "format": "prettier nodes credentials --write"
   },
   "files": [
