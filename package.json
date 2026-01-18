@@ -1,6 +1,6 @@
 {
   "name": "@tosvenson/n8n-nodes-listmonk",
-  "version": "1.0.27",
+  "version": "1.0.27b4",
   "description": "n8n node for Listmonk API",
   "keywords": [
     "n8n-community-node-package"
