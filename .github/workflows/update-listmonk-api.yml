@@ -32,10 +32,10 @@ jobs:
       - name: Install deps
         run: pnpm install --frozen-lockfile
 
-      - name: Update OpenAPI (Listmonk)
-        run: |
-          curl -fsSL https://listmonk.app/docs/swagger/collections.yaml -o ./nodes/listmonk/openapi.yaml
-          pnpm exec js-yaml -j ./nodes/listmonk/openapi.yaml > ./nodes/listmonk/openapi.json
+#      - name: Update OpenAPI (Listmonk)
+#        run: |
+#          curl -fsSL https://listmonk.app/docs/swagger/collections.yaml -o ./nodes/listmonk/openapi.yaml
+#          pnpm exec js-yaml -j ./nodes/listmonk/openapi.yaml > ./nodes/listmonk/openapi.json
 
       - name: Check for changes
         id: check

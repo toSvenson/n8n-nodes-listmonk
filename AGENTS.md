@@ -1,9 +1,9 @@
 # Repository Guidelines
 
 ## Project Structure & Module Organization
-- Source: `nodes/` (e.g., `nodes/sevdesk/sevdesk.node.ts`, `openapi.json`, `logo.svg`).
-- Credentials: `credentials/` (e.g., `sevdeskApi.credentials.ts`).
-- Tests: colocated `*.spec.ts` (e.g., `nodes/sevdesk/sevdesk.spec.ts`).
+- Source: `nodes/` (e.g., `nodes/listmonk/sevdesk.node.ts`, `openapi.json`, `logo.svg`).
+- Credentials: `credentials/` (e.g., `listmonkApi.credentials.ts`).
+- Tests: colocated `*.spec.ts` (e.g., `nodes/listmonk/sevdesk.spec.ts`).
 - Build output: `dist/` (git-ignored; published via `files` in `package.json`).
 - Config: `tsconfig.json`, `.eslintrc.js`, `jest.config.js`, `gulpfile.js`, `Makefile`.
 
@@ -15,7 +15,7 @@
 - Lint: `pnpm lint` | Fix: `pnpm lintfix`.
 - Format: `pnpm format`.
 - Run in n8n (local link): `make build && make link && make start` (links into `~/.n8n/custom` and starts n8n).
-- Update OpenAPI: use `make up-sevdesk`.
+- Update OpenAPI: use `make up-listmonk`.
 
 ## Coding Style & Naming Conventions
 - Language: TypeScript, strict mode enabled.
@@ -35,9 +35,9 @@
 - PRs: include purpose/summary, screenshots if UI assets change, and link related issues. Ensure `pnpm build`, `pnpm lint`, and `pnpm test` pass.
 
 ## Security & Configuration Tips
-- Do not commit secrets. API tokens are provided via the `sevdeskApi` credential (sent as `Authorization`).
-- Network calls use `baseURL` `https://my.sevdesk.de/api/v1` with JSON headers via `requestDefaults`.
+- Do not commit secrets. API tokens are provided via the `listmonkApi` credential (sent as `Authorization`).
+- Network calls use `baseURL` `https://my.listmonk.app/api/v1` with JSON headers via `requestDefaults`.
 
 ## Architecture Overview
-- The node’s properties are generated from `nodes/sevdesk/openapi.json` using `@devlikeapro/n8n-openapi-node` (`N8NPropertiesBuilder`).
+- The node’s properties are generated from `nodes/listmonk/openapi.json` using `@devlikeapro/n8n-openapi-node` (`N8NPropertiesBuilder`).
 - Gulp copies icons from `nodes/**` and `credentials/**` into `dist/` during build.

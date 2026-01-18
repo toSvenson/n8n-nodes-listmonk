@@ -1,19 +1,19 @@
 {
-  "name": "@front-matter/n8n-nodes-listmonk",
+  "name": "@tosvenson/n8n-nodes-listmonk",
   "version": "1.0.27",
   "description": "n8n node for Listmonk API",
   "keywords": [
     "n8n-community-node-package"
   ],
   "license": "MIT",
-  "homepage": "https://front-matter.de",
+  "homepage": "https://dotsndots.be",
   "author": {
-    "name": "Martin Fenner",
-    "email": "martin@front-matter.de"
+    "name": "Sven Huijbrechts",
+    "email": "sven.huijbrechts@dotsndots.be"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:front-matter/n8n-nodes-listmonk.git"
+    "url": "git@github.com:toSvenson/n8n-nodes-listmonk.git"
   },
   "engines": {
     "node": ">=18.10",

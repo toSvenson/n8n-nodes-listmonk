@@ -10,7 +10,7 @@ link:
 	npm link
 
 start:
-	cd ~/.n8n/custom && npm link @wiesinghilker/n8n-nodes-listmonk && n8n start
+	cd ~/.n8n/custom && npm link @tosvenson/n8n-nodes-listmonk && n8n start
 
 tests:
 	pnpm run test
@@ -28,6 +28,7 @@ clean:
 
 up-listmonk:
 	# Fetch Listmonk Swagger YAML and convert to JSON (requires curl; run after pnpm install)
-	curl -fsSL https://listmonk.app/docs/swagger/collections.yaml -o ./nodes/listmonk/openapi.yaml
+	# SH: Temporary workaround until there is an updated OpenAPI spec
+	# curl -fsSL https://listmonk.app/docs/swagger/collections.yaml -o ./nodes/listmonk/openapi.yaml
 	# Use the installed `yaml` CLI to convert YAML -> JSON
 	pnpm exec yaml -j < ./nodes/listmonk/openapi.yaml > ./nodes/listmonk/openapi.json
